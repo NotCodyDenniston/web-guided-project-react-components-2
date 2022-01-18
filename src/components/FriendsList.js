@@ -2,6 +2,7 @@ import React from 'react'
 // 👉 1- FriendsList renders several Friend components, import Friend
 
 export default function FriendsList(props) {
+  console.log(props);
   // 👉 2- What data does FriendsList need to do its job? Use destructuring
   return (
     <div className='list-friends container'>
