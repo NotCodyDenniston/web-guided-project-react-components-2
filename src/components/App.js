@@ -25,9 +25,19 @@ export default function App() {
   // 👉 5- Build a `changeStatus` function that takes an id and
   // changes the `married` from true to false and viceversa
   const changeStatus = (id) => {
-    console.log(id);
+    const updatedFriends = friends.map(fr => {
+      if (fr.id === id) {
+        return { ...fr,  married: !fr.married };
+      } else {
+        return fr;
+      }
+    })
+    setFriends(updatedFriends);
   }
-
+  /**
+   * map / filter / reduce ???
+   */
+// i++ === i += 1 === i = i + 1
   // STRETCH - Make a helper function that returns
   // a filtered array of friends data (filtering by search term)
 
